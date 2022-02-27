@@ -6,7 +6,7 @@ import {io, Socket} from "socket.io-client";
 export const api={
     socket: null as null | Socket,
     createConnection(){ //создаем соединение
-        this.socket = io("http://localhost:3009", {transports: ['websocket']});
+        this.socket = io("https://sockets-chat88.herokuapp.com/", {transports: ['websocket']});
     },
     //функция-подписчик уведомляет всех пользователей об изменениях
     subscribe(initMessagesHandler: (messages:any)=>void,
